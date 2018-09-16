@@ -7,6 +7,7 @@ using Microsoft.AspNetCore;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Logging;
+using Ocelot.DependencyInjection;
 
 namespace OcelotDemo
 {
@@ -25,7 +26,7 @@ namespace OcelotDemo
                         .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
                         .AddJsonFile("appsettings.json", true, true)
                         .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
-                        .AddJsonFile("Ocelot.json")
+                        .AddOcelot()
                         .AddEnvironmentVariables();
                 })
                 .UseUrls("http://localhost:1000")

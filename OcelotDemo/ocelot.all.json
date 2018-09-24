@@ -28,9 +28,6 @@
       ],
       "UpstreamPathTemplate": "/GetOrderDetail/{id}"
     }
-  ],
-  "GlobalConfiguration": {
-
-  }
+  ]
 }
 

@@ -6,18 +6,25 @@
       "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
-          "Port": 1001
-        },
+          "Port": 1002
+        }
+      ],
+      "UpstreamPathTemplate": "/order/{everything}",
+      "UpstreamHttpMethod": [ "Get", "Post" ]
+    },
+    {
+      "DownstreamPathTemplate": "/api/Order/{id}",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
         {
           "Host": "localhost",
           "Port": 1002
         }
       ],
-      "UpstreamPathTemplate": "/order/{everything}",
+      "UpstreamPathTemplate": "/order/{id}",
       "UpstreamHttpMethod": [ "Get", "Post" ],
-      "LoadBalancerOptions": {
-        "Type": "RoundRobin"
-      }
+      "Key": "Order",
+      "Priority": 2
     }
   ]
 }

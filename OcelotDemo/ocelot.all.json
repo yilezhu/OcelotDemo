@@ -20,6 +20,15 @@
       }
     }
   ],
+  "Aggregates": [
+    {
+      "ReRouteKeys": [
+        "Good",
+        "Order"
+      ],
+      "UpstreamPathTemplate": "/GetOrderDetail/{id}"
+    }
+  ],
   "GlobalConfiguration": {
 
   }

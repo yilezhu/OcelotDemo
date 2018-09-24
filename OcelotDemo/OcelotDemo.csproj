@@ -10,7 +10,7 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.App" />
-    <PackageReference Include="Ocelot" Version="11.1.0-unstable0007" />
+    <PackageReference Include="Ocelot" Version="12.1.0-unstable0001" />
   </ItemGroup>
 
   <ItemGroup>

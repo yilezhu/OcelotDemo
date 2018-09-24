@@ -5,9 +5,11 @@ VisualStudioVersion = 15.0.27703.2026
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotDemo", "OcelotDemo\OcelotDemo.csproj", "{C5D4A187-90F1-4458-A40B-F12345C2D4D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GoodApi", "GoodApi\GoodApi.csproj", "{C036C7C5-6C45-422A-97B5-68D620567C20}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GoodApi", "GoodApi\GoodApi.csproj", "{C036C7C5-6C45-422A-97B5-68D620567C20}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderApi", "OrderApi\OrderApi.csproj", "{93340FC0-C6BB-4109-87B3-EA3D27D06C3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApi", "OrderApi\OrderApi.csproj", "{93340FC0-C6BB-4109-87B3-EA3D27D06C3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotDemo.Models", "OcelotDemo.Models\OcelotDemo.Models.csproj", "{39F3E1FE-19DF-4DB4-902F-8EC6AC713A80}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{93340FC0-C6BB-4109-87B3-EA3D27D06C3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{93340FC0-C6BB-4109-87B3-EA3D27D06C3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{93340FC0-C6BB-4109-87B3-EA3D27D06C3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{39F3E1FE-19DF-4DB4-902F-8EC6AC713A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{39F3E1FE-19DF-4DB4-902F-8EC6AC713A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{39F3E1FE-19DF-4DB4-902F-8EC6AC713A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{39F3E1FE-19DF-4DB4-902F-8EC6AC713A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

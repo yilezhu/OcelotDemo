@@ -4,7 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 
-namespace GoodApi.Controllers
+namespace OcelotDemo.Auth.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -14,7 +14,7 @@ namespace GoodApi.Controllers
         [HttpGet]
         public ActionResult<IEnumerable<string>> Get()
         {
-            return new string[] { "value1 from Good Api", "value2 from Good Api" };
+            return new string[] { "value1", "value2" };
         }
 
         // GET api/values/5

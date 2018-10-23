@@ -11,7 +11,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderApi", "OrderApi\OrderA
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotDemo.Models", "OcelotDemo.Models\OcelotDemo.Models.csproj", "{39F3E1FE-19DF-4DB4-902F-8EC6AC713A80}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OcelotDemo.Auth", "OcelotDemo.Auth\OcelotDemo.Auth.csproj", "{9594A4BD-E561-4162-849A-02C3F0A70308}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OcelotDemo.Auth", "OcelotDemo.Auth\OcelotDemo.Auth.csproj", "{9594A4BD-E561-4162-849A-02C3F0A70308}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Ocelot.ConfigAuthLimitCache", "Ocelot.ConfigAuthLimitCache\Ocelot.ConfigAuthLimitCache.csproj", "{252D54E0-1D54-482B-8692-A7CF00031917}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +41,10 @@ Global
 		{9594A4BD-E561-4162-849A-02C3F0A70308}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9594A4BD-E561-4162-849A-02C3F0A70308}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9594A4BD-E561-4162-849A-02C3F0A70308}.Release|Any CPU.Build.0 = Release|Any CPU
+		{252D54E0-1D54-482B-8692-A7CF00031917}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{252D54E0-1D54-482B-8692-A7CF00031917}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{252D54E0-1D54-482B-8692-A7CF00031917}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{252D54E0-1D54-482B-8692-A7CF00031917}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

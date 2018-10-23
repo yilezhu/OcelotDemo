@@ -13,6 +13,8 @@ using Microsoft.Extensions.Options;
 using Ocelot.DependencyInjection;
 using Ocelot.Middleware;
 using Ocelot.Provider.Consul;
+using Ocelot.ConfigAuthLimitCache.DependencyInjection;
+using Ocelot.ConfigAuthLimitCache.Middleware;
 
 namespace OcelotDemo
 {
@@ -28,21 +30,24 @@ namespace OcelotDemo
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            var authenticationProviderKey = "OcelotKey";
-            var identityServerOptions = new IdentityServerOptions();
-            Configuration.Bind("IdentityServerOptions", identityServerOptions);
-            services.AddAuthentication(identityServerOptions.IdentityScheme)
-                .AddIdentityServerAuthentication(authenticationProviderKey, options =>
-                {
-                    options.RequireHttpsMetadata = false; //是否启用https
-                    options.Authority = $"http://{identityServerOptions.ServerIP}:{identityServerOptions.ServerPort}";//配置授权认证的地址
-                    options.ApiName = identityServerOptions.ResourceName; //资源名称，跟认证服务中注册的资源列表名称中的apiResource一致
-                    options.SupportedTokens = SupportedTokens.Both;
-                }
-                );
+            //var authenticationProviderKey = "OcelotKey";
+            //var identityServerOptions = new IdentityServerOptions();
+            //Configuration.Bind("IdentityServerOptions", identityServerOptions);
+            //services.AddAuthentication(identityServerOptions.IdentityScheme)
+            //    .AddIdentityServerAuthentication(authenticationProviderKey, options =>
+            //    {
+            //        options.RequireHttpsMetadata = false; //是否启用https
+            //        options.Authority = $"http://{identityServerOptions.ServerIP}:{identityServerOptions.ServerPort}";//配置授权认证的地址
+            //        options.ApiName = identityServerOptions.ResourceName; //资源名称，跟认证服务中注册的资源列表名称中的apiResource一致
+            //        options.SupportedTokens = SupportedTokens.Both;
+            //    }
+            //    );
             services.AddOcelot()//注入Ocelot服务
+                    .AddAuthLimitCache(option=> {
+                        option.DbConnectionStrings = "Server=.;Database=Ocelot;User ID=sa;Password=1;";
+                    })
                     .AddConsul();
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            //services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -52,9 +57,10 @@ namespace OcelotDemo
             {
                 app.UseDeveloperExceptionPage();
             }
-            app.UseAuthentication();
-            app.UseOcelot().Wait();//使用Ocelot中间件
-            app.UseMvc();
+            //app.UseAuthentication();
+            app.UseAhphOcelot().Wait();
+            //app.UseOcelot().Wait();//使用Ocelot中间件
+            //app.UseMvc();
         }
     }
 }

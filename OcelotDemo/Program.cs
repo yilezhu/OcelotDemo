@@ -26,7 +26,7 @@ namespace OcelotDemo
                         .SetBasePath(hostingContext.HostingEnvironment.ContentRootPath)
                         .AddJsonFile("appsettings.json", true, true)
                         .AddJsonFile($"appsettings.{hostingContext.HostingEnvironment.EnvironmentName}.json", true, true)
-                        .AddJsonFile("Ocelot.json", true, true)
+                        //.AddJsonFile("Ocelot.json", true, true)
 
                         // .AddOcelot(hostingContext.HostingEnvironment)
                         .AddEnvironmentVariables();

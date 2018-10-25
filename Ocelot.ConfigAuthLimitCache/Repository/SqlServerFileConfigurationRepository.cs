@@ -52,7 +52,7 @@ namespace Ocelot.ConfigAuthLimitCache.Repository
             }
             #region 提取配置信息
             var file = new FileConfiguration();
-            string glbsql = "select top 1 * from OcelotGlobalConfiguration";
+            string glbsql = "select top 1 * from OcelotGlobalConfiguration where IsDefault=1";
             //提取全局配置信息
             using (var connection = new SqlConnection(_option.DbConnectionStrings))
             {

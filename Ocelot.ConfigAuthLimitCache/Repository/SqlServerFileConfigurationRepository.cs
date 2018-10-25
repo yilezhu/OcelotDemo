@@ -16,8 +16,8 @@ using System.Threading.Tasks;
 namespace Ocelot.ConfigAuthLimitCache.Repository
 {
     /// <summary>
-    /// 曹金燕
-    /// 2018.10.08
+    /// yilezhu
+    /// 2018.10.22
     /// 实现从SQLSERVER数据库中提取配置信息
     /// </summary>
     public class SqlServerFileConfigurationRepository : IFileConfigurationRepository
